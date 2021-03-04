@@ -32,9 +32,13 @@ AuHaloName = 'Au' + str(AuHaloNum).zfill(2)
 # PATHS for various I/O folders
 #-----------------------------------------------------------------------------------------
 # Path for APOKASC data
+# For folder 'data', use the one in '/iSIMBA/archive/raw/kuldeep'. The folder contains
+# meta data to run this example fast.
 apokascPath = 'data/apokasc2/'
 
-# Path for the mock catalogues 
+# Path for the mock catalogues
+# The following information is redundant for this particular example, however these 
+# will be needed for a run from scratch.
 if catalogue.lower() == 'hits':
     mockpath = 'data/' + AuHaloName + '_HITS/v2/kroupaIMF/level3_MHD/halo_' \
                + str(AuHaloNum) + '/mockdir_angle' + solarPos + '/'
@@ -46,6 +50,8 @@ else:
     sys.exit(1)
 
 # Path for the simulation snapshot
+# The following information is redundant for this particular example, however this 
+# will be needed for a run from scratch.
 snappath = 'data/snapshot_reduced_halo_' + str(AuHaloNum) + '_063.hdf5'
 
 # Path for the output data
